@@ -17,7 +17,8 @@ faces = CF.face.detect(img_url,True,False,'age,gender') # 중요!
 # 세 번째 인자 : landmarks(눈,코,입 등의 위치)의 반환 여부
 # 네 번째 인자 : 반환할 속성(연령,성별 등)
 
-print(faces[0]['faceAttributes']) # 터미널 창에 속성값들을 출력
+for face in faces:
+    print(face['faceAttributes']) # 터미널 창에 속성값들을 출력
 
 # 인식된 얼굴에 네모 박스 그리는 함수 작성
 def getRectangle(faceDictionary):
